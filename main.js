@@ -81,3 +81,17 @@ console.log(studentInfo);
 let studentSubjects = student.subjects;
 console.log(`The student subjects are: ${studentSubjects}`);
 
+//Eventos
+function showMessageAlert(){
+    alert('Hola Mundo');
+}
+
+function showMessageText(){
+    document.getElementById('text').innerHTML = 'Texto cambiado';
+}
+
+function showMessageChange(){
+    document.getElementById('text').innerHTML = 'El texto fue cambiado';
+}
+
+
