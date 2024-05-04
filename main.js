@@ -86,12 +86,49 @@ function showMessageAlert(){
     alert('Hola Mundo');
 }
 
-function showMessageText(){
-    document.getElementById('text').innerHTML = 'Texto cambiado';
-}
-
 function showMessageChange(){
     document.getElementById('text').innerHTML = 'El texto fue cambiado';
 }
 
 
+//STRING
+//tamaño de una cadena
+const car = 'Tesla';
+console.log(`The car ${car} has ${car.length} letters`);
+
+//mostrar una parte de la cadena
+let text = 'Education';
+console.log(text.slice(-6, -2));
+
+//Con substring
+let textSubstring = 'Education';
+console.log(textSubstring.substring(2,6));
+
+//reemplazar un texto
+let textReplace = 'Practicando javascript hoy ';
+console.log(textReplace.replace('hoy', 'hoy sabado'));
+
+//texto en mayuscula
+let textUpperCase = 'Hola Mundo';
+console.log(textUpperCase.toUpperCase());
+
+//concatenar textos
+let textConcat = 'Hola ';
+let textConcat2 = 'Mundo';
+console.log(textConcat.concat(textConcat2));
+
+//eliminar espacios al inicio y al final de un texto
+let textTrim = ' Hola a todos!!    ';
+console.log(textTrim.length);
+console.log(textTrim.trim().length);
+
+//buscar una cadena o character en una cadena
+let textInclude = 'Hola mundo';
+console.log(textInclude.includes('mundo'));
+
+let textcharAt = 'Busca minas';
+console.log(textcharAt.charAt(4));
+
+//almacenar en un array unas cadenas 
+const movies =  'Titanic, Avengers, Matriz';
+console.log(movies.split(', '));
