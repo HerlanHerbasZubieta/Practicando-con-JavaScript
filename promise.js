@@ -44,18 +44,30 @@ let promise3 = new Promise((response, reject) => {
 
 })
 
-promise1.then(res => {
-    console.log(res.description);
-    promise2.then(res => {
-        console.log(res.description);
-        promise3.then(res => {
-            console.log(res.description);
-        }).catch(error => {
-            console.error(error);
-        })
-    }).catch(errr => {
-        console.error(errr);
-    })
-}).catch(error => {
-    console.error(error);
-})
+// promise1.then(res => {
+//     console.log(res.description);
+//     promise2.then(res => {
+//         console.log(res.description);
+//         promise3.then(res => {
+//             console.log(res.description);
+//         }).catch(error => {
+//             console.error(error);
+//         })
+//     }).catch(errr => {
+//         console.error(errr);
+//     })
+// }).catch(error => {
+//     console.error(error);
+// })
+
+// asyn-await´
+async function executePromise(){
+    let responseProm1 = await promise1;
+    console.log(responseProm1);
+    let responseProm2 = await promise2;
+    console.log(responseProm2);
+    let responseProm3 = await promise3;
+    console.log(responseProm3);
+}
+
+executePromise();
