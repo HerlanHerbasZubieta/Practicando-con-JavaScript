@@ -18,7 +18,7 @@ p1.innerHTML = '<strong>' + p1.textContent + '</strong>'
 const list = document.querySelector('.list');
 const addItem = document.getElementById('addItem');
 const removeItem = document.getElementById('removeItem');
-let count = null;
+let count = list.childElementCount;
 
 addItem.addEventListener('click', (element)=> {
     const newItem = document.createElement('li');
