@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1 {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="paragraph">Es un parrafo</p>
+    <button id="btn">Click me</button>
+    <script>
+        const paragraph = document.getElementById("paragraph");
+        const btn = document.getElementById("btn");
+
+        // Añadir una clase
+        paragraph.classList.add('highlight');
+
+        // Quitar una clase
+        paragraph.classList.remove('highlight');
+
+        btn.addEventListener("click", () =>{
+            paragraph.classList.toggle("p1")
+        })
+    </script>
+</body>
+</html>
