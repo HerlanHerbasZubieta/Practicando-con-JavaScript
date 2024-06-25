@@ -8,12 +8,12 @@ document.getElementById('searchButton').addEventListener('click', searchMovies);
 let resultDiv = document.getElementById('results');
 
 
-function searchMovies() {
+async function searchMovies() {
     resultDiv.innerHTML = 'Cargando...';
     let searchInput = document.getElementById('searchInput').value;
-    fetch(`${url}?query=${searchInput}&api_key=${API_KEY}`)
-        .then(response => response.json())
-        .then(response => displayMovie(response.results));
+    const response = await fetch(`${url}?query=${searchInput}&api_key=${API_KEY}`)
+    const data = await response.json()
+    displayMovie(data.results);
 }
 
 function displayMovie(movies) {
@@ -25,6 +25,7 @@ function displayMovie(movies) {
     }
     resultDiv.style.color = 'black';
     movies.forEach(movie => {
+        console.log(movie)
         let movieDiv = document.createElement('div');
         movieDiv.classList.add('movie');
 
