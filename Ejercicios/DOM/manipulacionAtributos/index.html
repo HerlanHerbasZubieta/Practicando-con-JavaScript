@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM attributes</title>
+</head>
+<body>
+    <img id="img" src="guardianes-galaxia.jpg" alt="image">
+    <button type="button" id="btn">Click me</button>
+    <script>
+        const img = document.getElementById("img");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener('click',  ()=>{
+            img.setAttribute("src", "deadpool.jpg")
+            img.setAttribute("width","100")
+            img.removeAttribute("alt");
+        })
+    </script>
+</body>
+</html>
